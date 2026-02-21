@@ -23,7 +23,7 @@ Leds are diods and need a specific input current in order to work correctly with
 
 Diods allow the electric current to flow one way only, from the **anode** (positive end) to **cathode** (negative end).
 
-# 02 - Click to light up the led
+# 02 - Click to Light Up the Led
 - **Goal**: driving a led through a push button switch: when the button is clicked the led should turn on, otherwise it sould stay off
 - **Requirements**:
   - ESP32-Wrover-E
@@ -59,8 +59,10 @@ This phenomenon is something that is not percived by human eyes as it's very fas
 ### What I've learned
 Arrays in Arduino.
 
-# 4 - Flowing Light [extra]
+# 4.1 - Flowing Light by Click [extra]
 - **Goal**: make the ledbar's led turning on and off sequentially when the push button is pressed.
+
+  The schematic diagram is a blend between the previous project and the one created in [section 02](#02---click-to-light-up-the-led).
 - **Requirements**:
   - ESP32-Wrover-E
   - Led bar
@@ -68,8 +70,21 @@ Arrays in Arduino.
   - Push button
   - 2 x Resistor (to adjust push button input current)
  
-### What I've learned
+### What I've learned: troubleshooting edition
 At the beginning what I've wrote did not respond properly (at all, more precisely). I've tried the various part of the code separately and they responded correctly once I've changed the reading status of the push button to *low*, but the whole code did just not. Once I've recreated it one step at a time, it worked. I would like to know what happened.
+
+# 05 - Breathing Led
+- **Goal**: turning the led on and off by making it do it gradually.
+- **Requirements**:
+  - ESP32-Wrover-E
+  - Led
+  - Resistor (to adjust led input current)
+
+### What I've learned
+**PWM** (Pulse-Width Modulation) is a system to convert analog signals to digital ones using squared waveform signal.
+
+To make it simple, it uses stairs to follow the smooth change of an analog signal. Those stairs have an accuracy: on the same inclination, they can be quite high (low accuracy) or they can be very low (high accuracy) following the slope.
+The **duty cycle** points out as a percentage how much the squared waveform signal is on respect to the whole signal duration.
 
 <details>
   <summary>Personal Notes</summary>
