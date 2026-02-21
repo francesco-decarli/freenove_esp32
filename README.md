@@ -49,6 +49,16 @@ In push buttons (and any other electrical element that has a similar structure),
 
 This phenomenon is something that is not percived by human eyes as it's very fast, but it has to be dealt with in order to make the system work as expected.
 
+# 4 - Flowing Light
+- **Goal**: make the ledbar's led turning on and off sequentially.
+- **Requirements**:
+  - ESP32-Wrover-E
+  - Led bar
+  - *N* x Resistor (to adjust led input current) where *N* is the number of led that comprise the ledbar
+ 
+### What I've learned
+Arrays in Arduino.
+
 <details>
   <summary>Personal Notes</summary>
   
