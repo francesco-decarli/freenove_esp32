@@ -59,6 +59,18 @@ This phenomenon is something that is not percived by human eyes as it's very fas
 ### What I've learned
 Arrays in Arduino.
 
+# 4 - Flowing Light [extra]
+- **Goal**: make the ledbar's led turning on and off sequentially when the push button is pressed.
+- **Requirements**:
+  - ESP32-Wrover-E
+  - Led bar
+  - *N* x Resistor (to adjust led input current) where *N* is the number of led that comprise the ledbar
+  - Push button
+  - 2 x Resistor (to adjust push button input current)
+ 
+### What I've learned
+At the beginning what I've wrote did not respond properly (at all, more precisely). I've tried the various part of the code separately and they responded correctly once I've changed the reading status of the push button to *low*, but the whole code did just not. Once I've recreated it one step at a time, it worked. I would like to know what happened.
+
 <details>
   <summary>Personal Notes</summary>
   
