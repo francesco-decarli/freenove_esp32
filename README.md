@@ -86,12 +86,19 @@ At the beginning what I've wrote did not respond properly (at all, more precisel
 To make it simple, it uses stairs to follow the smooth change of an analog signal. Those stairs have an accuracy: on the same inclination, they can be quite high (low accuracy) or they can be very low (high accuracy) following the slope.
 The **duty cycle** points out as a percentage how much the squared waveform signal is on respect to the whole signal duration.
 
-# 5 - Meteor Flowing Light
+# 6 - Meteor Flowing Light
 - **Goal**: make the ledbar's led turning on and off sequentially with a moving effect where the the brightest led leads. So, there'll be the brightest led moving from left to right and backward, followed by other active leds with a lower duty cycle.
 - **Requirements**:
   - ESP32-Wrover-E
   - Led bar
   - *N* x Resistor (to adjust led input current) where *N* is the number of led that comprise the ledbar
+
+# 07 - Random Color RGB Light
+- **Goal**: comprehend RGB led
+- **Requirements**:
+  - ESP32-Wrover-E
+  - RGB Led
+  - 3 x Resistor (to adjust led input current)
 
 <details>
   <summary>Personal Notes</summary>
