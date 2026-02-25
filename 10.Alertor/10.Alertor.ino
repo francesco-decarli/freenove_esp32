@@ -5,19 +5,26 @@
 void setup() {
   pinMode(PIN_BUTTON, INPUT);
   ledcAttachChannel(PIN_BUZZER, 1, 10, CHANNEL);
-  ledcWriteTone(PIN_BUZZER, 1'000);   // set the tone at 2kHz (for starter)
+  ledcWriteTone(PIN_BUZZER, 2'000);   // set the tone at 2kHz (for starter) + duty at 50%
 }
 
 void loop() {
   if(digitalRead(PIN_BUTTON) == LOW)
-  {
-    ledcWriteTone(PIN_BUZZER, 1'000);
-    delay(300);
-    ledcWriteTone(PIN_BUZZER, 300);
-    delay(300);
-    ledcWriteTone(PIN_BUZZER, 500);
-    delay(500);
-  }
+    sin_alert();
   else
     ledcWriteTone(PIN_BUZZER, 0);     // set the tone at 0 Hz ==> buzzer off
+}
+
+// gives a sinusoidal flow to the tone to make
+void sin_alert()
+{
+  float sinVal;
+  int toneVal;
+  for(int i = 0; i < 360; i += 10)
+  {
+    sinVal = sin(i * (PI / 180));
+    toneVal = 2'000 + sinVal * 500;   // frequency
+    ledcWriteTone(PIN_BUZZER, toneVal);
+    delay(10);
+  }
 }
