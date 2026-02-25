@@ -126,7 +126,7 @@ There are two kind of buzzers:
   - **Passive**: need an external oscillator (PWM) to work, so it's possible to make it sound at different frequencies
 
 # 10 - Alertor
-- **Goal**: make the buzzer sound whenever the push button is clicked.
+- **Goal**: make the buzzer sound whenever the push button is clicked with a sinusoidal-like frequency.
 - **Requirements**:
   - ESP32-Wrover-E
   - NPN transistor (to amplify the supply current given to the buzzer)
@@ -134,6 +134,20 @@ There are two kind of buzzers:
   - Push button
   - Resistor (to adjust transistor input current)
   - 2 x Resistor (to adjust push button current)
+
+# 11 - Alertor With Timer
+- **Goal**: make the buzzer sound (sinusoidal wave) whenever the push button is clicked. The timer controls the buzzer sound event and behaves like its PWV.
+- **Requirements**:
+  - ESP32-Wrover-E
+  - NPN transistor (to amplify the supply current given to the buzzer)
+  - Passive buzzer
+  - Push button
+  - Resistor (to adjust transistor input current)
+  - 2 x Resistor (to adjust push button current)
+  
+### What I've learned
+Where <ins>**prescaler**</ins> is available, it's possible <ins>to adjust clock frequency, lowering it</ins>.
+General knowledge about managing timers with Arduino.
 
 <details>
   <summary>Personal Notes</summary>
