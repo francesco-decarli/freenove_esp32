@@ -125,6 +125,16 @@ There are two kind of buzzers:
   - **Active**: it have an internal active oscillator (due to this is has a more complex manufacturing and usually needs a waterproof coating) which sounds as long as there's current flowing into it. It sounds at the given by the manufacturer frequency
   - **Passive**: need an external oscillator (PWM) to work, so it's possible to make it sound at different frequencies
 
+# 10 - Alertor
+- **Goal**: make the buzzer sound whenever the push button is clicked.
+- **Requirements**:
+  - ESP32-Wrover-E
+  - NPN transistor (to amplify the supply current given to the buzzer)
+  - Passive buzzer
+  - Push button
+  - Resistor (to adjust transistor input current)
+  - 2 x Resistor (to adjust push button current)
+
 <details>
   <summary>Personal Notes</summary>
   
