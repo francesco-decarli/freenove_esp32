@@ -47,7 +47,7 @@ Push buttons are an open contact by default. When the button in pressed, the cir
 ### What I've learned
 In push buttons (and any other electrical element that has a similar structure), there's this <ins>mechanical phenomenon called **debounce**</ins>. This term refers to the change of the state of the switch (in both ways) which is not smooth, but it does change more than once before being stable the other state (like an echo, narrowing down its tone from loud to nothing, fading out).
 
-This phenomenon is something that is not percived by human eyes as it's very fast, but it has to be dealt with in order to make the system work as expected.
+This phenomenon is something that is not perceived by human eyes as it's very fast, but it has to be dealt with in order to make the system work as expected.
 
 # 4 - Flowing Light
 - **Goal**: make the ledbar's led turning on and off sequentially.
@@ -93,12 +93,22 @@ The **duty cycle** points out as a percentage how much the squared waveform sign
   - Led bar
   - *N* x Resistor (to adjust led input current) where *N* is the number of led that comprise the ledbar
 
-# 07 - Random Color RGB Light
-- **Goal**: comprehend RGB led
+# 07 - Random Colour RGB Light
+- **Goal**: comprehend RGB led.
 - **Requirements**:
   - ESP32-Wrover-E
   - RGB Led
   - 3 x Resistor (to adjust led input current)
+
+# 08 - Gradient Colour RGB Light
+- **Goal**: Make the colour change smooth (related to the previous project).
+- **Requirements**:
+  - ESP32-Wrover-E
+  - RGB Led
+  - 3 x Resistor (to adjust led input current)
+  
+### What I've learned
+Operator priority exists and makes code more readable.
 
 <details>
   <summary>Personal Notes</summary>
