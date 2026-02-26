@@ -164,6 +164,11 @@ A serial communication defined as ***8N1*** is a standard for communications wit
   - **N**o parity bit (used to check any error in the payload, without it there's no control but it maximize communication speed)
   - **1** bit to point out the end of the package sent
 
+# 13 - Serial Talk
+- **Goal**: Receive and print data from terminal.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+
 <details>
   <summary>Personal Notes</summary>
   
