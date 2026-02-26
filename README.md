@@ -1,4 +1,4 @@
-This is the repository hosting all the project about the Freenove's Starterkit of ESP32-Wrover-E ([datasheet](https://documentation.espressif.com/esp32-wrover-e_esp32-wrover-ie_datasheet_en.pdf)).
+This is the repository hosting all the project about the **Freenove's Starterkit of ESP32-Wrover-E** ([datasheet](https://documentation.espressif.com/esp32-wrover-e_esp32-wrover-ie_datasheet_en.pdf)). All the projects are developed using **Arduino IDE 2.3.7** on Ubuntu.
 I'm developing them to enhance my electronic knowledge.
 
 # 00 - ESP32's Led Blinking
@@ -158,6 +158,11 @@ General knowledge about managing timers with Arduino.
 Serial communication usually refers to UART (Universal Asynchronous Receiver/Transmitter), where the <ins>baud rate</ins> (simply think about it as the radio frequency transmitter and receiver sync to talk over to each other) has to be the same; most used values are 96'000 and 115'200.
 Thanks to an integrated serial to USB converter (UART to USB and USB to UART), ESP32 can communicate with computers, in particular with IDEs.
 There's a serial monitor on Arduino IDE and it's on the top right corner. It's important to set the same baud rate.
+
+A serial communication defined as ***8N1*** is a standard for communications with:
+  - **8** bits of data
+  - **N**o parity bit (used to check any error in the payload, without it there's no control but it maximize communication speed)
+  - **1** bit to point out the end of the package sent
 
 <details>
   <summary>Personal Notes</summary>

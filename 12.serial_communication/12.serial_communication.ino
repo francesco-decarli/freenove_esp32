@@ -1,5 +1,5 @@
 void setup() {
-  Serial.begin(115'200);
+  Serial.begin(115'200);  // baud rate: 115'200, 8N1
   Serial.println("ESP32 inizialization completed!");
 }
 
