@@ -149,6 +149,16 @@ There are two kind of buzzers:
 Where <ins>**prescaler**</ins> is available, it's possible <ins>to adjust clock frequency, lowering it</ins>.
 General knowledge about managing timers with Arduino.
 
+# 12 - Serial Print
+- **Goal**: Printing system tick every 5s on the serial monitor.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  
+### What I've learned
+Serial communication usually refers to UART (Universal Asynchronous Receiver/Transmitter), where the <ins>baud rate</ins> (simply think about it as the radio frequency transmitter and receiver sync to talk over to each other) has to be the same; most used values are 96'000 and 115'200.
+Thanks to an integrated serial to USB converter (UART to USB and USB to UART), ESP32 can communicate with computers, in particular with IDEs.
+There's a serial monitor on Arduino IDE and it's on the top right corner. It's important to set the same baud rate.
+
 <details>
   <summary>Personal Notes</summary>
   
