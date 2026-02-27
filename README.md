@@ -82,9 +82,9 @@ At the beginning what I've wrote did not respond properly (at all, more precisel
 
 ### What I've learned
 **PWM** (Pulse-Width Modulation) is a system to convert analog signals to digital ones using squared waveform signal.
-
 To make it simple, it uses stairs to follow the smooth change of an analog signal. Those stairs have an accuracy: on the same inclination, they can be quite high (low accuracy) or they can be very low (high accuracy) following the slope.
-The **duty cycle** points out as a percentage how much the squared waveform signal is on respect to the whole signal duration.
+
+The **duty cycle** points out as a percentage how much the squared waveform signal is on respect to the whole signal duration. It's used to represent the signal intensity of the waveform in the specific slice of time when used in PWM, representing the *pulse-width* of the *modulation*, or to the single stair of the mental image I've tried to create; while the accuracy is determined by how many stairs fits in the slice of time the analysis is performed.
 
 # 6 - Meteor Flowing Light
 - **Goal**: make the ledbar's led turning on and off sequentially with a moving effect where the the brightest led leads. So, there'll be the brightest led moving from left to right and backward, followed by other active leds with a lower duty cycle.
@@ -150,7 +150,7 @@ Where <ins>**prescaler**</ins> is available, it's possible <ins>to adjust clock 
 General knowledge about managing timers with Arduino.
 
 # 12 - Serial Print
-- **Goal**: Printing system tick every 5s on the serial monitor.
+- **Goal**: printing system tick every 5s on the serial monitor.
 - **Requirements**:
   - ESP32-Wrover-E (with its wire)
   
@@ -165,9 +165,31 @@ A serial communication defined as ***8N1*** is a standard for communications wit
   - **1** bit to point out the end of the package sent
 
 # 13 - Serial Talk
-- **Goal**: Receive and print data from terminal.
+- **Goal**: receive and print data from terminal.
 - **Requirements**:
   - ESP32-Wrover-E (with its wire)
+
+# 14 - Reading Potentiometer With AD/DA
+- **Goal**: through the analog data read from potentiometer, drive led brightness.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - Rotary potentiometer
+  - Led
+  - Resistor (to adjust led input current) 
+  
+### What I've learned
+As introduced in [section 05](#05---breathing-led), as computers stores data with "0" and "1", a method to convert analog signals (which are smooth and continuous) to digital in a way that, in fact, can be stored in a computer (or, in general, processed in any way with digital things) is needed. This is referred to AD/DA conversion, which means:
+  - **AD**: Analog to Digital
+  - **DA**: Digital to Analog
+The classic method is via PWM which uses a squared waveform as introduced before.
+
+For a practical example think about an audio system. The microphone has as internal diaphragm which is pushed by its user voice. The movement is converted to a digital signal so that it can be processed or just simply directly sent to the speakers. Once the signal is at the speakers, the inverse process happens: the digital signal is once again converted to analog to make the speakers sound. The output sound is not the same identical sound inputted to into the microphone, but if the accuracy is right, human ears cannot spot the difference (the information that is lost in the process).
+
+A **potentiometer** is a resistor with a fixable resistance.
+
+<ins>**Curious note**</ins>: to observe the actual analog signal acquired from the potentiometer, I've made a little change to the electrical scheme of this project by connecting the led directly to the same pin of the potentiometer (in this case putting them together to the same breadboard column of PIN_4).
+
+Also, I've commented out the *delay()* command and the logger, trying to spot the difference between the analog (performing the previous change to the schematic) and digital signal (by making the code change with the original electrical scheme). It's not possible to see it.
 
 <details>
   <summary>Personal Notes</summary>
