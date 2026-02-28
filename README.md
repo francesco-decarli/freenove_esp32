@@ -61,8 +61,6 @@ Arrays in Arduino.
 
 # 4.1 - Flowing Light by Click [extra]
 - **Goal**: make the ledbar's led turning on and off sequentially when the push button is pressed.
-
-  The schematic diagram is a blend between the previous project and the one created in [section 02](#02---click-to-light-up-the-led).
 - **Requirements**:
   - ESP32-Wrover-E
   - Led bar
@@ -70,6 +68,11 @@ Arrays in Arduino.
   - Push button
   - 2 x Resistor (to adjust push button input current)
  
+### Personal project
+This project was thought and developed by me, it's not on the Freenove guide. 
+
+The schematic diagram is a blend between the previous project and the one created in [section 02](#02---click-to-light-up-the-led).
+
 ### What I've learned: troubleshooting edition
 At the beginning what I've wrote did not respond properly (at all, more precisely). I've tried the various part of the code separately and they responded correctly once I've changed the reading status of the push button to *low*, but the whole code did just not. Once I've recreated it one step at a time, it worked. I would like to know what happened.
 
@@ -199,6 +202,28 @@ Also, I've commented out the *delay()* command and the logger, trying to spot th
   
 ### What I've learned
 There are more than one pin of ESP32-Wroover-E that supports capacitive sense. Its reading passes through Analog-to-Digital conversion.
+
+# 16 - Touch to Lamp
+- **Goal**: whenever a touch is detected on the loose end of the jumper, change led status.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - Jumper
+  - Led
+  - Resistor (to adjust led input current)
+I've added more info to the logger and (in my humble opinion) enhanced a bit the logic by using a single read for the whole loop.
+
+# 16 - Touch to Lamp PWM [extra]
+- **Goal**: touch detection drives led PWM.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - Jumper
+  - Led
+  - Resistor (to adjust led input current)
+  
+### Personal project
+I've did this project to try to drive the PWM with touch detection. An easy project with just a single problem: values read from touch detection spans between 170 and 580 while PWM has a resolution of 8 bits (values from 0 to 255). As a simple and quick solution I've clipped those values between 256 and 510 as a rough solution, thus the project works only when the loose end of the jumper is touched, otherwise led's off.
+
+There are surely smarter solutions, but this one works well for me, so I'm satisfied.
 
 <details>
   <summary>Personal Notes</summary>
