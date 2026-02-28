@@ -191,6 +191,15 @@ A **potentiometer** is a resistor with a fixable resistance.
 
 Also, I've commented out the *delay()* command and the logger, trying to spot the difference between the analog (performing the previous change to the schematic) and digital signal (by making the code change with the original electrical scheme). It's not possible to see it.
 
+# 15 - Capacitive Touch
+- **Goal**: read touch value through capacitive touch of ESP32-Wroover-E itself by just connecting just one side of a jumper to a specific pin, and touching the other end of the jumper.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - Jumper
+  
+### What I've learned
+There are more than one pin of ESP32-Wroover-E that supports capacitive sense. Its reading passes through Analog-to-Digital conversion.
+
 <details>
   <summary>Personal Notes</summary>
   
