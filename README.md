@@ -212,7 +212,7 @@ There are more than one pin of ESP32-Wroover-E that supports capacitive sense. I
   - Resistor (to adjust led input current)
 I've added more info to the logger and (in my humble opinion) enhanced a bit the logic by using a single read for the whole loop.
 
-# 16 - Touch to Lamp PWM [extra]
+# 16.1 - Touch to Lamp PWM [extra]
 - **Goal**: touch detection drives led PWM.
 - **Requirements**:
   - ESP32-Wrover-E (with its wire)
@@ -224,6 +224,14 @@ I've added more info to the logger and (in my humble opinion) enhanced a bit the
 I've did this project to try to drive the PWM with touch detection. An easy project with just a single problem: values read from touch detection spans between 170 and 580 while PWM has a resolution of 8 bits (values from 0 to 255). As a simple and quick solution I've clipped those values between 256 and 510 as a rough solution, thus the project works only when the loose end of the jumper is touched, otherwise led's off.
 
 There are surely smarter solutions, but this one works well for me, so I'm satisfied.
+
+# 17 - Potentiometer & Led
+- **Goal**: driving led brightness through potentiometer in a proper way, without wasting resources.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - Led
+  - Resistor (to adjust led input current)
+  - Rotary potentiometer
 
 <details>
   <summary>Personal Notes</summary>
