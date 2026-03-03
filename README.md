@@ -233,6 +233,18 @@ There are surely smarter solutions, but this one works well for me, so I'm satis
   - Resistor (to adjust led input current)
   - Rotary potentiometer
 
+# 18 - Brightness
+- **Goal**: driving the led through a photoresistor: based on the light in the ambience, the led should compensate its brightness (as smartphone's).
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - Led
+  - Resistor (to adjust led input current)
+  - Photoresistor
+  - Resistor (to adjust photoresistor input current)
+  
+### What I've learned
+A **photoresistor** is a resistor whose resistance value is driven by the light that receives directly on its light sensitive surface.
+
 <details>
   <summary>Personal Notes</summary>
   
