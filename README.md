@@ -245,6 +245,18 @@ There are surely smarter solutions, but this one works well for me, so I'm satis
 ### What I've learned
 A **photoresistor** is a resistor whose resistance value is driven by the light that receives directly on its light sensitive surface.
 
+# 19 - Thermometer
+- **Goal**: driving the led through a thermistor: based on the temperature, the led should adjust its brightness.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - Led
+  - Resistor (to adjust led input current)
+  - Thermistor
+  - Resistor (to adjust thermistor input current)
+  
+### What I've learned
+A **thermistor** is a resistor whose resistance value is driven by the temperature that perceive on its sensitive surface.
+
 <details>
   <summary>Personal Notes</summary>
   
