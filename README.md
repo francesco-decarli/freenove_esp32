@@ -257,6 +257,17 @@ A **photoresistor** is a resistor whose resistance value is driven by the light 
 ### What I've learned
 A **thermistor** is a resistor whose resistance value is driven by the temperature that perceive on its sensitive surface.
 
+# 20 - Joystick
+- **Goal**: reading joystick data.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - Joystick
+  
+### What I've learned
+A *joystick* is comprised by two rotary potentiometer at 90 degrees from each other: one for x axis and the other one for y axis. This way, it can detect changes into two different directions simultaneously. It also has a push button switch to detect any vertical pression on the joystick itself.
+
+The two rotary potentiometers are analogical (its data needs an ADC conversion), while the push button can directly read from a GPIO.
+
 <details>
   <summary>Personal Notes</summary>
   
