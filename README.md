@@ -290,6 +290,17 @@ To be used, these are its pins where at least 3 pins are needed to be driven:
   - Clear (1 pin)
   - Serial data output (1 pin): to connect more *74HC595* in series
 
+# 22 - Segment Display
+- **Goal**: through *74HC595* component drive 7-segment display.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - *74HC595*
+  - 7-segment display
+  - 8 x Resistor (to adjust display input current)
+  
+### What I've learned
+**7-segment display** is comprised by eight leds (pull-up pins) which light go through the segments shaped spaces (or the dot one).
+
 <details>
   <summary>Personal Notes</summary>
   
