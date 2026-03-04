@@ -50,21 +50,21 @@ In push buttons (and any other electrical element that has a similar structure),
 This phenomenon is something that is not perceived by human eyes as it's very fast, but it has to be dealt with in order to make the system work as expected.
 
 # 4 - Flowing Light
-- **Goal**: make the ledbar's led turning on and off sequentially.
+- **Goal**: make the led bar's led turning on and off sequentially.
 - **Requirements**:
   - ESP32-Wrover-E
   - Led bar
-  - *N* x Resistor (to adjust led input current) where *N* is the number of led that comprise the ledbar
+  - *N* x Resistor (to adjust leds' input current) where *N* is the number of led that comprise the led bar
  
 ### What I've learned
 Arrays in Arduino.
 
 # 4.1 - Flowing Light by Click [extra]
-- **Goal**: make the ledbar's led turning on and off sequentially when the push button is pressed.
+- **Goal**: make the led bar's led turning on and off sequentially when the push button is pressed.
 - **Requirements**:
   - ESP32-Wrover-E
   - Led bar
-  - *N* x Resistor (to adjust led input current) where *N* is the number of led that comprise the ledbar
+  - *N* x Resistor (to adjust leds' input current) where *N* is the number of led that comprise the led bar
   - Push button
   - 2 x Resistor (to adjust push button input current)
  
@@ -90,11 +90,11 @@ To make it simple, it uses stairs to follow the smooth change of an analog signa
 The **duty cycle** points out as a percentage how much the squared waveform signal is on respect to the whole signal duration. It's used to represent the signal intensity of the waveform in the specific slice of time when used in PWM, representing the *pulse-width* of the *modulation*, or to the single stair of the mental image I've tried to create; while the accuracy is determined by how many stairs fits in the slice of time the analysis is performed.
 
 # 6 - Meteor Flowing Light
-- **Goal**: make the ledbar's led turning on and off sequentially with a moving effect where the the brightest led leads. So, there'll be the brightest led moving from left to right and backward, followed by other active leds with a lower duty cycle.
+- **Goal**: make the led bar's led turning on and off sequentially with a moving effect where the the brightest led leads. So, there'll be the brightest led moving from left to right and backward, followed by other active leds with a lower duty cycle.
 - **Requirements**:
   - ESP32-Wrover-E
   - Led bar
-  - *N* x Resistor (to adjust led input current) where *N* is the number of led that comprise the ledbar
+  - *N* x Resistor (to adjust leds' input current) where *N* is the number of led that comprise the led bar
 
 # 07 - Random Colour RGB Light
 - **Goal**: comprehend RGB led.
@@ -267,6 +267,28 @@ A **thermistor** is a resistor whose resistance value is driven by the temperatu
 A *joystick* is comprised by two rotary potentiometer at 90 degrees from each other: one for x axis and the other one for y axis. This way, it can detect changes into two different directions simultaneously. It also has a push button switch to detect any vertical pression on the joystick itself.
 
 The two rotary potentiometers are analogical (its data needs an ADC conversion), while the push button can directly read from a GPIO.
+
+# 21 - Parallel To Serial Data
+- **Goal**: redo [project 4](#-4---flowing-light) using **74HC595** component which converts serial data to parallel data, not using all ESP32's GPIOs.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - *74HC595*
+  - Led bar
+  - *N* x Resistor (to adjust leds' input current) where *N* is the number of led that comprise the led bar
+  
+### What I've learned
+**74HC595** is a chip that converts 8-bit serial data input into parallel output through a shift-register. This means that the input byte is read and its every single bit binary value is dealt to *74HC595* single pins, which allows to expand ESP32's GPIO ports.
+
+To be used, these are its pins where at least 3 pins are needed to be driven:
+  - Parallel data output (8 pins)
+  - <ins>Serial data input</ins> (1 pin)
+  - Power supply (1 pin)
+  - Ground (1 pin)
+  - Enable output (1 pin)
+  - <ins>Parallel output update</ins> (1 pin)
+  - <ins>Clock</ins> (1 pin)
+  - Clear (1 pin)
+  - Serial data output (1 pin): to connect more *74HC595* in series
 
 <details>
   <summary>Personal Notes</summary>
