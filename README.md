@@ -325,6 +325,18 @@ To be used, these are its pins where at least 3 pins are needed to be driven:
 ### What I've learned
 A **servo motor** is finely designed to control a very precise movement through a sensory system feedback which allows a fine angular or linear position of the motor control.
 
+# 25 - LCD Display
+- **Goal**: print something on the LCD display.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - *LCD1602*
+  
+### What I've learned
+**LCD** stands for *Liquid Crystal Display* which exploits the electrical current to orient the crystals in order to let more or less light pass.
+The LCD provided in this Starterkit can display 2 lines of characters in 16 columns and it's driven via I2C, so the PINs used are reduced to 4 (it's integrated in its board).
+**I2C** stands for *Inter-Integrated Circuit* and it's a common serial synchronous communication protocol used to exchange information between the microcontroler and its peripherals. It uses two wires: SDA (serial data) and SCL (serial clock).
+This protocol is used with low-speed peripheral (sensors, display, EEPROM) and uses a master-slave system where every slave has a unique address, thus it can support having more slaves attached. Its advantage is to simplify connections reducing the used PINs on the microcontroller.
+
 <details>
   <summary>Personal Notes</summary>
   
