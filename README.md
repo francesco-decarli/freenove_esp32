@@ -313,6 +313,18 @@ To be used, these are its pins where at least 3 pins are needed to be driven:
 ### What I've learned
 **L293D** is an integrated circuit chip with a 4-channel motor drive. It behaves like a **H bridge** which is an electrical circuit that allows to change the direction of the voltage applied to a load (which in this case will be the motor itself) by driving the 4 switches it is comprised.
 
+### ----------- Interlude (I've fried my ESP32-Wrover) -----------
+
+# 24 - Servo Motor
+- **Goal**: control a servo motor in a range of 0 - 180 degrees through a potentiometer.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - Servo motor
+  - Rotary potentiometer
+  
+### What I've learned
+A **servo motor** is finely designed to control a very precise movement through a sensory system feedback which allows a fine angular or linear position of the motor control.
+
 <details>
   <summary>Personal Notes</summary>
   
