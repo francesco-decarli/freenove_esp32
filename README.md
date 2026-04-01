@@ -332,10 +332,25 @@ A **servo motor** is finely designed to control a very precise movement through 
   - *LCD1602*
   
 ### What I've learned
-**LCD** stands for *Liquid Crystal Display* which exploits the electrical current to orient the crystals in order to let more or less light pass.
+**LCD** stands for *Liquid Crystal Display* which exploits the electric current to orient the crystals in order to let more or less light pass.
 The LCD provided in this Starterkit can display 2 lines of characters in 16 columns and it's driven via I2C, so the PINs used are reduced to 4 (it's integrated in its board).
 **I2C** stands for *Inter-Integrated Circuit* and it's a common serial synchronous communication protocol used to exchange information between the microcontroler and its peripherals. It uses two wires: SDA (serial data) and SCL (serial clock).
 This protocol is used with low-speed peripheral (sensors, display, EEPROM) and uses a master-slave system where every slave has a unique address, thus it can support having more slaves attached. Its advantage is to simplify connections reducing the used PINs on the microcontroller.
+
+# 26 - Ultrasonic Ranging
+- **Goal**: read and print on logger the distance of the ultrasonic device.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - *HC-SR04* (ultrasonic device)
+  
+### What I've learned
+**HC-SR04** component is comprised by an ultrasonic emitter and a ultrasonic receiver. Through a mechanical mechanism, the electric current is transformed into ultrasonic sound (not in the audible human spectrum) and the receiver does the opposite work. Calculating the delta of time between sending and receiving data, it's possible to know the distance to the aiming object.
+
+# 26.1 - Ultrasonic Ranging [with third party library]
+- **Goal**: do the same as the [previous project](#-26---ultrasonic-ranging) using the *UltrasonicSensor* library.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire)
+  - *HC-SR04* (ultrasonic device)
 
 <details>
   <summary>Personal Notes</summary>
