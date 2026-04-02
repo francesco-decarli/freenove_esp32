@@ -364,6 +364,14 @@ This protocol is used with low-speed peripheral (sensors, display, EEPROM) and u
 **Bluetooth** is a short-distance communication synchronous system (there's also the low energy version: BLE - Bluetooth Low Energy).
 In this communication system there's a master-slave communication where the master manages everything related to the pairing phase and the communication (e.g. clock synchronization).
 
+# 28 - BLE (Bluetooth Low Energy)
+- **Goal**: do the same as the previous project using the BLE system (communication via USART).
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire) ==> does have a built-in antenna for wireless communications
+  
+**NOTE**: sadly, this project has a lot of warnings.
+**NOTE**: couldn't get communication ESP-smartphone done as the app now requires a subscription, but the other way works fine.
+
 <details>
   <summary>Personal Notes</summary>
   
