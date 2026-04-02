@@ -372,6 +372,15 @@ In this communication system there's a master-slave communication where the mast
 **NOTE**: sadly, this project has a lot of warnings.
 **NOTE**: couldn't get communication ESP-smartphone done as the app now requires a subscription, but the other way works fine.
 
+# 29 - Bluetooth To Led
+- **Goal**: drive a led through Bluetooth communication.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire) ==> does have a built-in antenna for wireless communications
+  - Led
+  - Resistor (to adjust led input current)
+  
+**NOTE**: this project uses a deprecated library, so there'll be warnings
+
 <details>
   <summary>Personal Notes</summary>
   
