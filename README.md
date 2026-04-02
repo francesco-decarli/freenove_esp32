@@ -352,6 +352,18 @@ This protocol is used with low-speed peripheral (sensors, display, EEPROM) and u
   - ESP32-Wrover-E (with its wire)
   - *HC-SR04* (ultrasonic device)
 
+# 27 - Bluetooth
+- **Goal**: Simple communication between ESP32-Wroover-E and a device (mobile phone) via Bluetooth protocol.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire) ==> does have a built-in antenna for wireless communications
+  
+**NOTE**: instead of installing the APK on the guide, just search for the same app on Android Store and there you'll find the official app.
+**NOTE**: this project uses a deprecated library, so there'll be warnings
+  
+### What I've learned
+**Bluetooth** is a short-distance communication synchronous system (there's also the low energy version: BLE - Bluetooth Low Energy).
+In this communication system there's a master-slave communication where the master manages everything related to the pairing phase and the communication (e.g. clock synchronization).
+
 <details>
   <summary>Personal Notes</summary>
   
