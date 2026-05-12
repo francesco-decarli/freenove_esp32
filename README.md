@@ -381,6 +381,23 @@ In this communication system there's a master-slave communication where the mast
   
 **NOTE**: this project uses a deprecated library, so there'll be warnings
 
+# 30 - Bluetooth Media And DAC
+- **Goal**: receive music data via Bluetooth and reproduce it through a speaker.
+- **Requirements**:
+  - ESP32-Wrover-E (with its wire) ==> does have a built-in antenna for wireless communications
+  - Speaker
+  - NPN transistor
+  - Diode
+  - Resistor
+  - Capacitor (optional)
+  
+**NOTE**: once again, a lot of libraries calls are deprecated, here. Speaker just makes noise. With this I'm more and more prone to ignore Arduino: I don't want to go over all the errors here, I'll pass to VS Code and make everything in a more detailed way as I'll go through more structured pattern, or this is my humble opinion.
+
+### What I've learned
+**I2S** (Integrated Interchip Sound) is a serial bus standard to transfer digital audio PCM (Pulse Code Modulation) between integrated circuits. It's different from *I2C* as this is optimized for audio data flow.
+**A2DP** (Advanced Audio Distribution Profile) is a standard Bluetooth profile for high quality audio streaming between devices.
+**AVRCP** (Audio/Video Remote Control Profile) allows media control (pause, play, next, previous). Usually used in combination with *A2DP*.
+
 <details>
   <summary>Personal Notes</summary>
   
